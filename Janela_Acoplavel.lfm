@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form name="frmMinhaJanelaAcoplavel" formType="tablesDock" 
+     dataType="RRPG.DataTypeUnico.DaMinhaJanelaAcoplavel"
+
+      title="Minha Janela Acoplável">
+
+     
+
+    <label text="Olá Mundo"/>
+
+ 
+
+    ... Outras tags LFM e códigos lua.....   
+
+</form>

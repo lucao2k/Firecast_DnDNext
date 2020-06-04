@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="frmMagias_Nivel_0" height="330" margins="{top=2,bottom=2}">  
+
+	<rectangle color="#708090" xradius="10" yradius="10" height="310" width="1173" margins="{top=5, right=5}">
+	
+	<layout align="top" height="30" margins="{top=5, left=5, right=5}">
+		<rectangle color="white" xradius="10" yradius="10" height="30" width="1163" margins="{left=5, right=5}" >
+			<label align="left" text="Nível da Magia:" width="75" height="20" margins="{left=15,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<label align="left" text="0" width="10" height="20" margins="{left=1}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold" horzTextAlign="center"/>
+			<label align="left" text="- Truques" width="80" height="20" margins="{left=2,top=5, bottom=5, right=15}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		</rectangle>
+	</layout>
+	
+	<layout align="top" height="30" margins="{top=5, left=5, right=5}">
+		<rectangle color="white" xradius="10" yradius="10" height="30" width="1163" margins="{left=5, right=5}" >		
+			<label align="left" text="Nome da Magia:" width="79" height="20" margins="{left=15,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<edit align="left" width="250" height="20" field="Magia_Nome" margins="{left=2,top=5, bottom=5}"/> 
+		
+			<label align="left" text="Tempo Conjuração:" width="93" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<edit align="left" width="100" height="20" field="Magia_Tempo_Conjuracao" margins="{left=2,top=5, bottom=5}"/> 
+		
+			<label align="left" text="Alcance:" width="40" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<edit align="left" width="75" height="20" field="Magia_Tempo_Conjuracao" margins="{left=2,top=5, bottom=5}"/> 
+		
+			<label align="left" text="Duração:" width="42" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<edit align="left" width="75" height="20" field="Magia_Tempo_Conjuracao" margins="{left=2,top=5, bottom=5}"/> 
+		
+			<label align="left" text="Componentes:" width="69" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<edit align="left" width="280" height="20" field="Magia_Tempo_Conjuracao" margins="{left=2,top=5, bottom=5, right=15}"/> 
+		</rectangle>
+	</layout>
+	
+	<layout align="top" height="30" margins="{top=5, left=5, right=5}">	
+		<rectangle color="white" xradius="10" yradius="10" height="30" width="1163" margins="{left=5, right=5}" >
+			<label align="left" text="Escola da Magia:" width="79" height="20" margins="{left=15,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<comboBox  align="left" width="130" height="20" field="Magia_Escola" margins="{left=2,top=5, bottom=5}" items="{'Abjuração', 'Adivinhação', 'Conjuração', 'Encantamento', 'Evocação', 'Ilusão', 'Necromancia', 'Transmutação'}" values="{'Abjuração', 'Adivinhação', 'Conjuração', 'Encantamento', 'Evocação', 'Ilusão', 'Necromancia', 'Transmutação'}" value="Abjuração"/> 
+		
+			<label align="left" text="Área de Efeito:" width="71" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<comboBox  align="left" width="110" height="20" field="Magia_Area_Efeito" margins="{left=2,top=5, bottom=5}" items="{'LINHA', 'CONE', 'CUBO', 'ESFERA', 'CILINDRO'}" values="{'LINHA', 'CONE', 'CUBO', 'ESFERA', 'CILINDRO'}" value="LINHA"/> 
+		
+			<label align="left" text="Tipo:" width="25" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<comboBox  align="left" width="110" height="20" field="Magia_Dano_Tipo" margins="{left=2,top=5, bottom=5}" items="{'Dano', 'Cura', 'Suporte'}" values="{'Dano', 'Cura', 'Suporte'}" value="Dano"/> 
+		
+			<label align="left" text="Livro:" width="28" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<edit align="left" width="277" height="20" field="Magia_Livro" margins="{left=2,top=5, bottom=5}"/> 
+		
+			<label align="left" text="Pág. do Livro:" width="66" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+			<edit align="left" width="50" height="20" field="Magia_Livro_Pagina" margins="{left=2,top=5, bottom=5, right=15}"/> 
+		</rectangle>			
+	</layout>
+	
+	<layout align="top" margins="{top=5, left=5, right=5}">
+			
+				<label align="left" text="Descrição:" width="65" height="20" margins="{left=15, top=5, bottom=140}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<richEdit align="client" width="1066" height="300" field="Magia_Descricao" margins="{left=2, top=5, bottom=5}" showToolbar="false" backgroundColor="#333333" defaultFontColor="white"/> 	
+			
+	</layout>		
+	
+	<layout align="top" height="30" margins="{top=5, left=5, right=5}">
+		<rectangle color="white" xradius="10" yradius="10" height="30" width="1163" margins="{left=5, right=5}" >
+			<button align="right" text="X" width="300" height="20" left="100" top="20" margins="{right=5,top=5, bottom=5}">
+				<event name="onClick">
+					Dialogs.confirmOkCancel("Tem certeza que quer apagar esse objeto?",
+						function (confirmado)
+							if confirmado then
+								NDB.deleteNode(sheet);
+							end;
+						end);
+				</event>
+			</button> 
+		</rectangle>
+	</layout>
+
+	</rectangle>
+</form>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form formType="sheetTemplate" dataType="DT012345" title="Ficha_do_Lukao" name="Ficha_do_Lukao_v1" theme="light" left="219" top="121" width="905" height="629">
+
+
+	<tabControl left="0" top="0" width="1330" height="650">
+		<tab title="Dados Gerais">
+			<layout left="0" top="0" width="1330" height="650">
+				<image center="false" showProgress="true" src="http://blob.firecast.com.br/blobs/JBPRKBDP_1319770/Untitled-3.png" showStyle="proportional" left="0" top="0" width="1330" height="650"/>
+				
+				
+				<edit text="0" field="NomePersonagem" top="83" left="67" width="230" height="20" fontFamily="Segoe UI" fontSize="12" fontColor="black" keyboardType="default" enterKeyType="default" fontStyle="bold" />
+				<edit text="0" field="sabedoria_passiva" top="15" left="981" width="30" height="25" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<edit text="0" field="inspiracao" top="65" left="1144" width="30" height="25" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<edit text="0" field="bonus_proficiencia" top="117" left="982" width="30" height="25" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				
+				<edit text="0" field="CA" top="198" left="1014" width="40" height="40" fontFamily="Segoe UI" fontSize="18" fontColor="darkblue" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />				
+				<edit text="0" field="Iniciativa" top="200" left="1121" width="40" height="40" fontFamily="Segoe UI" fontSize="18" fontColor="darkblue" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />								
+				<edit text="0" field="Deslocamento" top="200" left="1234" width="40" height="40" fontFamily="Segoe UI" fontSize="18" fontColor="darkblue" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />												
+				
+				<edit text="0" field="Pontos_Vida_Total" top="300" left="1120" width="100" height="20" fontFamily="Segoe UI" fontSize="12" fontColor="black" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />												
+				<edit text="0" field="Pontos_Vida_Atual" top="350" left="1060" width="175" height="40" fontFamily="Segoe UI" fontSize="22" fontColor="darkblue" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />												
+				<edit text="0" field="Pontos_Vida_Temporario" top="450" left="1060" width="175" height="40" fontFamily="Segoe UI" fontSize="22" fontColor="darkblue" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />												
+						
+-- Inicio das Checkbox e Label das Resistencias e Pericias					
+				<checkBox field="checkbox_resistencia_forca" text="" left="126" top="207"/>
+				<label text="0" field="resistencia_forca" left="140" top="205" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />
+				<checkBox field="checkbox_pericia_atletismo" text="" left="126" top="225"/>	
+				<label text="0" field="pericia_atletismo" left="140" top="223" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />
+										
+				<checkBox field="checkbox_resistencia_destreza"  text="" left="126" top="351"/>
+				<label text="0" field="resistencia_destreza" left="140" top="349" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />
+				<checkBox field="checkbox_pericia_acrobacia" text="" left="126" top="369"/>
+				<label text="0" field="pericia_acrobacia" left="140" top="367" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />
+				<checkBox field="checkbox_pericia_furtividade" text="" left="126" top="387"/>
+				<label text="0" field="pericia_furtividade" left="140" top="385" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />
+				<checkBox field="checkbox_pericia_prestidigitacao" text="" left="126" top="405"/>		
+				<label text="0" field="pericia_prestidigitacao" left="140" top="403" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				
+				<checkBox field="checkbox_resistencia_constituicao" text="" left="126" top="494"/>	
+				<label text="0" field="resistencia_constituicao" left="140" top="492" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				
+				<checkBox field="checkbox_resistencia_inteligencia" text="" left="543" top="207"/>
+				<label text="0" field="resistencia_inteligencia" left="557" top="205" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_arcanismo" text="" left="543" top="225"/>
+				<label text="0" field="pericia_arcanismo" left="557" top="223" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_historia" text="" left="543" top="243"/>
+				<label text="0" field="pericia_historia" left="557" top="241" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_investigacao" text="" left="543" top="261"/>
+				<label text="0" field="pericia_investigacao" left="557" top="259" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_natureza" text="" left="543" top="279"/>
+				<label text="0" field="pericia_natureza" left="557" top="277" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_religiao" text="" left="543" top="297"/>
+				<label text="0" field="pericia_religiao" left="557" top="295" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				
+				<checkBox field="checkbox_resistencia_sabedoria" text="" left="543" top="351"/>
+				<label text="0" field="resistencia_sabedoria" left="557" top="349" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />
+				<checkBox field="checkbox_pericia_adestrar_animais" text="" left="543" top="369"/>
+				<label text="0" field="pericia_adestrar_animais" left="557" top="367" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_intuicao" text="" left="543" top="387"/>
+				<label text="0" field="pericia_intuicao" left="557" top="385" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_medicina" text="" left="543" top="405"/>
+				<label text="0" field="pericia_medicina" left="557" top="403" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_percepcao" text="" left="543" top="423"/>
+				<label text="0" field="pericia_percepcao" left="557" top="421" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_sobrevivencia" text="" left="543" top="441"/>
+				<label text="0" field="pericia_sobrevivencia" left="557" top="439" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				
+				<checkBox field="checkbox_resistencia_carisma" text="" left="543" top="494"/>
+				<label text="0" field="resistencia_carisma" left="557" top="492" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />
+				<checkBox field="checkbox_pericia_atuacao" text="" left="543" top="512"/>
+				<label text="0" field="pericia_atuacao" left="557" top="511" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_enganacao" text="" left="543" top="530"/>
+				<label text="0" field="pericia_enganacao" left="557" top="528" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_intimidacao" text="" left="543" top="548"/>
+				<label text="0" field="pericia_intimidacao" left="557" top="546" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+				<checkBox field="checkbox_pericia_persuasao" text="" left="543" top="566"/>
+				<label text="0" field="pericia_persuasao" left="557" top="564" width="30" height="20" fontFamily="Segoe UI" fontSize="16" fontColor="black" fontStyle="bold" horzTextAlign="center" />				
+-- Fim das Checkbox e Label das Resistencias e Pericias	
+				
+				-- Inicio dos campos de Atributos
+				<edit text="0" field="atributo_forca" top="241" left="32" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" width="57" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<label text="+00" field="modificador_forca" top="296" left="45" fontFamily="Segoe UI" fontSize="16" fontColor="black" width="30" height="20" fontStyle="bold" horzTextAlign="center" />
+				<dataLink field="atributo_forca">
+					<event name="onChange">
+                        local mod = math.floor(((sheet.atributo_forca or 10) / 2) - 5);
+							if (mod >= 0) then
+                                mod = "+" .. mod;
+							end;                    
+                        sheet.modificador_forca = mod;
+					</event>
+				</dataLink>		
+		
+				<edit text="0" field="atributo_destreza" top="386" left="32" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" width="57" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<label text="+00" field="modificador_destreza" top="440" left="45" fontFamily="Segoe UI" fontSize="16" fontColor="black" width="30" height="20" fontStyle="bold" horzTextAlign="center" />
+				<dataLink field="atributo_destreza">
+					<event name="onChange">
+                        local mod = math.floor(((sheet.atributo_destreza or 10) / 2) - 5);
+							if (mod >= 0) then
+                                mod = "+" .. mod;
+							end;                    
+                        sheet.modificador_destreza = mod;
+					</event>
+				</dataLink>		
+		
+				<edit text="0" field="atributo_constituicao" top="531" left="32" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" width="57" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<label text="+00" field="modificador_constituicao" top="584" left="45" fontFamily="Segoe UI" fontSize="16" fontColor="black" width="30" height="20" fontStyle="bold" horzTextAlign="center" />
+				<dataLink field="atributo_constituicao">
+					<event name="onChange">
+                        local mod = math.floor(((sheet.atributo_constituicao or 10) / 2) - 5);
+							if (mod >= 0) then
+                                mod = "+" .. mod;
+							end;                    
+                        sheet.modificador_constituicao = mod;
+					</event>
+				</dataLink>		
+		
+				<edit text="0" field="atributo_inteligencia" top="241" left="450" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" width="57" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<label text="+00" field="modificador_inteligencia" top="296" left="462" fontFamily="Segoe UI" fontSize="16" fontColor="black" width="30" height="20" fontStyle="bold" horzTextAlign="center" />
+				<dataLink field="atributo_inteligencia">
+					<event name="onChange">
+                        local mod = math.floor(((sheet.atributo_inteligencia or 10) / 2) - 5);
+							if (mod >= 0) then
+                                mod = "+" .. mod;
+							end;                    
+                        sheet.modificador_inteligencia = mod;
+					</event>
+				</dataLink>	
+		
+				<edit text="0" field="atributo_sabedoria" top="386" left="450" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" width="57" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<label text="+00" field="modificador_sabedoria" top="440" left="462" fontFamily="Segoe UI" fontSize="16" fontColor="black" width="30" height="20" fontStyle="bold" horzTextAlign="center" />
+				<dataLink field="atributo_sabedoria">
+					<event name="onChange">
+                        local mod = math.floor(((sheet.atributo_sabedoria or 10) / 2) - 5);
+							if (mod >= 0) then
+                                mod = "+" .. mod;
+							end;                    
+                        sheet.modificador_sabedoria = mod;
+					</event>
+				</dataLink>		
+
+				<edit text="0" field="atributo_carisma" top="531" left="450" fontFamily="Segoe UI" fontSize="16" fontColor="black" type="number" width="57" keyboardType="default" enterKeyType="default" fontStyle="bold" horzTextAlign="center" />
+				<label text="+00" field="modificador_carisma" top="584" left="462" fontFamily="Segoe UI" fontSize="16" fontColor="black" width="30" height="20" fontStyle="bold" horzTextAlign="center" />
+				<dataLink field="atributo_carisma">
+					<event name="onChange">
+                        local mod = math.floor(((sheet.atributo_carisma or 10) / 2) - 5);
+							if (mod >= 0) then
+                                mod = "+" .. mod;
+							end;                    
+                        sheet.modificador_carisma = mod;
+					</event>
+				</dataLink>	
+-- Fim dos campos dos Atributos
+		               
+               
+-- Inicio dos calculos de: Resistencias e Pericias              
+
+				<dataLink fields="{'modificador_forca', 'bonus_proficiencia', 'checkbox_resistencia_forca', 'checkbox_pericia_atletismo'}">             
+						<event name="onChange">					                
+							if sheet.checkbox_resistencia_forca == true then
+								sheet.resistencia_forca = (tonumber(sheet.modificador_forca) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.resistencia_forca = (tonumber(sheet.modificador_forca) or 0);
+							end;
+							
+							if sheet.checkbox_pericia_atletismo == true then
+								sheet.pericia_atletismo = (tonumber(sheet.modificador_forca) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_atletismo = (tonumber(sheet.modificador_forca) or 0);
+							end;
+						</event>
+				</dataLink>	
+				
+				<dataLink fields="{'modificador_destreza', 'bonus_proficiencia', 'checkbox_resistencia_destreza', 'checkbox_pericia_acrobacia', 'checkbox_pericia_furtividade', 'checkbox_pericia_prestidigitacao'}">             
+						<event name="onChange">					                
+							if sheet.checkbox_resistencia_destreza == true then
+								sheet.resistencia_destreza = (tonumber(sheet.modificador_destreza) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.resistencia_destreza = (tonumber(sheet.modificador_destreza) or 0);
+							end;
+							
+							if sheet.checkbox_pericia_acrobacia == true then
+								sheet.pericia_acrobacia = (tonumber(sheet.modificador_destreza) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_acrobacia = (tonumber(sheet.modificador_destreza) or 0);
+							end;
+							
+							if sheet.checkbox_pericia_furtividade == true then
+								sheet.pericia_furtividade = (tonumber(sheet.modificador_destreza) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_furtividade = (tonumber(sheet.modificador_destreza) or 0);
+							end;
+							
+							if sheet.checkbox_pericia_prestidigitacao == true then
+								sheet.pericia_prestidigitacao = (tonumber(sheet.modificador_destreza) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_prestidigitacao = (tonumber(sheet.modificador_destreza) or 0);
+							end;
+						</event>
+				</dataLink>
+				
+				<dataLink fields="{'modificador_constituicao', 'bonus_proficiencia', 'checkbox_resistencia_constituicao'}">             
+						<event name="onChange">					                
+							if sheet.checkbox_resistencia_constituicao == true then
+								sheet.resistencia_constituicao = (tonumber(sheet.modificador_constituicao) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.resistencia_constituicao = (tonumber(sheet.modificador_constituicao) or 0);
+							end;					
+						</event>
+				</dataLink>
+				
+				<dataLink fields="{'modificador_inteligencia', 'bonus_proficiencia', 'checkbox_resistencia_inteligencia', 'checkbox_pericia_arcanismo', 'checkbox_pericia_historia', 'checkbox_pericia_investigacao', 'checkbox_pericia_natureza', 'checkbox_pericia_religiao'}">             
+						<event name="onChange">					                
+							if sheet.checkbox_resistencia_inteligencia == true then
+								sheet.resistencia_inteligencia = (tonumber(sheet.modificador_inteligencia) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.resistencia_inteligencia = (tonumber(sheet.modificador_inteligencia) or 0);
+							end;	
+
+							if sheet.checkbox_pericia_arcanismo == true then
+								sheet.pericia_arcanismo = (tonumber(sheet.modificador_inteligencia) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_arcanismo = (tonumber(sheet.modificador_inteligencia) or 0);
+							end;		
+							if sheet.checkbox_pericia_historia == true then
+								sheet.pericia_historia = (tonumber(sheet.modificador_inteligencia) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_historia = (tonumber(sheet.modificador_inteligencia) or 0);
+							end;	
+							if sheet.checkbox_pericia_investigacao == true then
+								sheet.pericia_investigacao = (tonumber(sheet.modificador_inteligencia) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_investigacao = (tonumber(sheet.modificador_inteligencia) or 0);
+							end;	
+							if sheet.checkbox_pericia_natureza == true then
+								sheet.pericia_natureza = (tonumber(sheet.modificador_inteligencia) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_natureza = (tonumber(sheet.modificador_inteligencia) or 0);
+							end;	
+							if sheet.checkbox_pericia_religiao == true then
+								sheet.pericia_religiao = (tonumber(sheet.modificador_inteligencia) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_religiao = (tonumber(sheet.modificador_inteligencia) or 0);
+							end;						
+						</event>
+				</dataLink>
+				
+				<dataLink fields="{'modificador_sabedoria', 'bonus_proficiencia', 'checkbox_resistencia_sabedoria', 'checkbox_pericia_adestrar_animais', 'checkbox_pericia_intuicao', 'checkbox_pericia_medicina', 'checkbox_pericia_percepcao', 'checkbox_pericia_sobrevivencia'}">             
+						<event name="onChange">					                
+							if sheet.checkbox_resistencia_sabedoria == true then
+								sheet.resistencia_sabedoria = (tonumber(sheet.modificador_sabedoria) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.resistencia_sabedoria = (tonumber(sheet.modificador_sabedoria) or 0);
+							end;	
+							
+							if sheet.checkbox_pericia_adestrar_animais == true then
+								sheet.pericia_adestrar_animais = (tonumber(sheet.modificador_sabedoria) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_adestrar_animais = (tonumber(sheet.modificador_sabedoria) or 0);
+							end;
+							if sheet.checkbox_pericia_intuicao == true then
+								sheet.pericia_intuicao = (tonumber(sheet.modificador_sabedoria) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_intuicao = (tonumber(sheet.modificador_sabedoria) or 0);
+							end;
+							if sheet.checkbox_pericia_medicina == true then
+								sheet.pericia_medicina = (tonumber(sheet.modificador_sabedoria) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_medicina = (tonumber(sheet.modificador_sabedoria) or 0);
+							end;
+							if sheet.checkbox_pericia_percepcao == true then
+								sheet.pericia_percepcao = (tonumber(sheet.modificador_sabedoria) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_percepcao = (tonumber(sheet.modificador_sabedoria) or 0);
+							end;
+							if sheet.checkbox_pericia_sobrevivencia == true then
+								sheet.pericia_sobrevivencia = (tonumber(sheet.modificador_sabedoria) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_sobrevivencia = (tonumber(sheet.modificador_sabedoria) or 0);
+							end;							
+						</event>
+				</dataLink>
+				
+				<dataLink fields="{'modificador_carisma', 'bonus_proficiencia', 'checkbox_resistencia_carisma', 'checkbox_pericia_atuacao', 'checkbox_pericia_enganacao', 'checkbox_pericia_intimidacao', 'checkbox_pericia_persuasao'}">             
+						<event name="onChange">					                
+							if sheet.checkbox_resistencia_carisma == true then
+								sheet.resistencia_carisma = (tonumber(sheet.modificador_carisma) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.resistencia_carisma = (tonumber(sheet.modificador_carisma) or 0);
+							end;	
+							if sheet.checkbox_pericia_atuacao == true then
+								sheet.pericia_atuacao = (tonumber(sheet.modificador_carisma) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_atuacao = (tonumber(sheet.modificador_carisma) or 0);
+							end;		
+							if sheet.checkbox_pericia_enganacao == true then
+								sheet.pericia_enganacao = (tonumber(sheet.modificador_carisma) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_enganacao = (tonumber(sheet.modificador_carisma) or 0);
+							end;		
+							if sheet.checkbox_pericia_intimidacao == true then
+								sheet.pericia_intimidacao = (tonumber(sheet.modificador_carisma) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_intimidacao = (tonumber(sheet.modificador_carisma) or 0);
+							end;		
+							if sheet.checkbox_pericia_persuasao == true then
+								sheet.pericia_persuasao = (tonumber(sheet.modificador_carisma) or 0) +
+														  (tonumber(sheet.bonus_proficiencia) or 0);
+							else
+								sheet.pericia_persuasao = (tonumber(sheet.modificador_carisma) or 0);
+							end;							
+						</event>
+				</dataLink>
+					
+							
+						
+        
+		
+	
+				<button>
+					<event name="onClick">					
+						local minhaMesa = rrpg.getMesaDe(sheet);
+                        local chat = minhaMesa.chat;              
+                        chat:enviarMensagem("/aaa");
+					</event>
+				</button>
+			</layout>
+		</tab>
+	
+		<tab title="Batalha Física">			
+			<button left="20" top="20" height="25" text="Nova Arma" width="160" onClick="self.rclArmas:append();"/>						
+			<recordList name="rclArmas" field="armas" templateForm="frmBatalhaFisica" left="20" top="60" width="1280" autoHeight="true"/>				  
+        </tab>
+						
+		<tab title="Magias">			
+			<tabControl left="10" top="50" width="1238" height="600">
+				<tab title="Truques">
+					<scrollBox left="10" top="10" width="1238" height="575">
+						<button left="20" top="20" height="25" text="Nova Magia" width="80" onClick="self.rclMagias_Nivel_0:append();"/>
+						<recordList name="rclMagias_Nivel_0" field="magias_nivel_0" templateForm="frmMagias_Nivel_0" left="20" top="60" width="1280" autoHeight="true"/>
+					</scrollBox>
+				</tab>
+				<tab title="Nível 1">
+					<button left="20" top="20" height="25" text="Nova Magia" width="80" onClick="self.rclMagias_Nivel_1:append();"/>
+					<recordList name="rclMagias_Nivel_1" field="magias_nivel_1" templateForm="frmMagias_Nivel_1" left="20" top="60" width="1280" autoHeight="true"/>
+				</tab>
+				<tab title="Nível 2">
+					<button left="20" top="20" height="25" text="Nova Magia" width="80" onClick="self.rclMagias_Nivel_2:append();"/>
+					<recordList name="rclMagias_Nivel_2" field="magias_nivel_2" templateForm="frmMagias_Nivel_2" left="20" top="60" width="1280" autoHeight="true"/>
+				</tab>
+			</tabControl>
+        </tab>
+	</tabControl>
+</form>

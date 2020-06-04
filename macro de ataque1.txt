@@ -1,0 +1,74 @@
+	local personagem = sheet;  		
+	if (personagem ~= nil) then
+       local mesa = personagem.mesa;
+		
+--Quantos ataques efetuar?
+		local Quantidade_Ataques = tonumber(inputQuery("Quantos ataques serão efetuados?", "1"));
+		
+--Inicio do For para quantidade de ataques.		
+		for i = 1,tonumber(Quantidade_Ataques),1 do
+			escrever("Ataque de número: " .. (i));
+			
+--Seleciona o alvo
+			Alvo_do_Ataque = getCharacterSheet(chooseCharacterOfPlayer("Qual token deseja atacar?", myPlayer));
+			local dificuldade = tonumber(Alvo_do_Ataque.CA or 0); 
+			local resultado = rolar("1d20 + 5", "Dificuldade " .. dificuldade); 
+			
+			if resultado >= dificuldade then
+				enviar("Passou no teste! É hora de machucar alguém!!!");
+						
+--Carrego as armas disponiveis
+			local node = NDB.getRoot(sheet);
+			local nodes = NDB.getChildNodes(node.armas);
+			local lista_armas = { }
+			local index = 1
+				for i=1, #nodes, 1 do
+					lista_armas[index] = (nodes[i].Arma_Descricao)
+					index = index + 1
+				end	
+			local indice, texto = choose("Qual arma deseja usar?", lista_armas, 1);
+			
+--Carrego os dados da arma selecionada
+			local Arma_Nome = nodes[indice].Arma_Descricao or 0;
+			local Arma_Alcance = nodes[indice].Arma_Alcance or 0;
+			local Arma_Dano_Tipo = nodes[indice].Arma_Dano_Tipo or 0;
+			local Arma_Municao_Tipo = nodes[indice].Arma_Municao_Tipo or 0;
+			local Arma_Municao_Qtd = nodes[indice].Arma_Municao_Qtd or 0;
+			local Arma_Bonus_Mais = nodes[indice].Arma_Bonus_Positivo or 0;
+			local Arma_Bonus_Menos = nodes[indice].Arma_Bonus_Negativo or 0;
+			local Arma_Bonus = Arma_Bonus_Mais - Arma_Bonus_Menos or 0;
+			local Arma_Dano_Modificador = nodes[indice].Arma_Mod_Dano or 0;
+			
+				if Arma_Dano_Modificador == "FOR" then
+					Arma_Dano_Modificador = personagem.modificador_forca or 0;
+				end;
+				
+			local Arma_Dano = nodes[indice].Arma_Dano or 0;
+			local Arma_Dano_Critico = nodes[indice].Arma_Dano_Critico or 0;
+			--local Arma_Critico_Margem = nodes[indice].Arma_Critico_Margem or 0;
+			local Arma_Propriedades = nodes[indice].Arma_Propriedades or 0;
+			
+--Escrevendo no chat somente para fins de teste			
+			escrever("Arma_Nome: " .. Arma_Nome);
+			escrever("Arma_Alcance: " .. Arma_Alcance);
+			escrever("Arma_Dano_Tipo: " .. Arma_Dano_Tipo);
+			escrever("Arma_Municao_Tipo: " .. Arma_Municao_Tipo);
+			escrever("Arma_Municao_Qtd: " .. Arma_Municao_Qtd);
+			escrever("Arma_Bonus_Mais: " .. Arma_Bonus_Mais);
+			escrever("Arma_Bonus_Menos: " .. Arma_Bonus_Menos);
+			escrever("Arma_Dano_Modificador: " .. Arma_Dano_Modificador);
+			escrever("Arma_Dano: " .. Arma_Dano);
+			escrever("Arma_Dano_Critico: " .. Arma_Dano_Critico);
+			--escrever("Arma_Critico_Margem: " .. Arma_Critico_Margem);
+			escrever("Arma_Propriedades: " .. Arma_Propriedades);
+			
+			else
+				enviar("Infelizmente " .. personagem.NomePersonagem .. " não passou no teste.");
+			end;
+		end;
+--FIM do For para quantidade de ataques.	
+	end;   		
+			
+------------------------------------------------------------------------			
+	escrever("ATACANTE: " .. tostring(sheet));
+	escrever("DEFENSOR: " .. tostring(personagem));	

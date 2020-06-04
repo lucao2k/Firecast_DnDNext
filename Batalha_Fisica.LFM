@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="frmBatalhaFisica" height="160" margins="{top=2,bottom=2}">       
+
+	
+	<rectangle color="#708090" xradius="10" yradius="10" height="155" width="1213" margins="{top=5}">
+	
+		<layout align="top" height="30" margins="{top=10, left=15, right=15}">
+			<rectangle color="white" xradius="10" yradius="10" height="30" width="1183" margins="{left=15, right=15}">
+				<label align="left" text="Nome:" width="33" height="20" margins="{left=15,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="300" height="20" field="Arma_Descricao" margins="{left=2,top=5, bottom=5}"/> 
+				<label align="left" text="Peso:" width="26" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="50" height="20" field="Arma_Peso" margins="{left=2,top=5, bottom=5}"/>   
+				<label align="left" text="Arma Tipo:" width="54" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="100" height="20" field="Arma_Tipo" margins="{left=2,top=5, bottom=5}"/>		
+				<label align="left" text="Dano Tipo:" width="53" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="100" height="20" field="Arma_Dano_Tipo" margins="{left=2,top=5, bottom=5}"/>
+				<label align="left" text="Alcance:" width="41" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="50" field="Arma_Alcance" margins="{left=2,top=5, bottom=5}"/>
+				
+					<layout align="left" height="20" width="286" margins="{left=15, right=15}">
+						<rectangle align="right" color="#DCDCDC" xradius="10" yradius="10" height="20" width="286" margins="{top=5, bottom=5}">
+							<label align="left" text="Munição:" width="45" height="20" margins="{left=15}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+							<edit align="left" width="100" field="Arma_Municao_Tipo" margins="{left=2, top=2, bottom=2}"/> 
+							<label align="left" text="Qtd. Mun.:" width="52" height="20" margins="{left=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+							<edit align="left" width="50" field="Arma_Municao_Qtd" margins="{left=2, right=15, top=2, bottom=2}"/> 
+						</rectangle>
+					</layout>
+			</rectangle>
+		</layout>
+
+		<layout align="top" height="30" margins="{top=5, left=15, right=15}">
+			<rectangle color="white" xradius="10" yradius="10" height="30" width="1183" margins="{left=15, right=15}" >
+				<label align="left" text="Bônus (+):" width="49" height="20" margins="{left=15,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="40" height="20" field="Arma_Bonus_Positivo" margins="{left=2,top=5, bottom=5}"/> 
+				<label align="left" text="Bônus (-):" width="47" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="40" height="20" field="Arma_Bonus_Negativo" margins="{left=2,top=5, bottom=5}"/> 
+				<label align="left" text="Mod. de Dano:" width="70" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<comboBox  align="left" width="67" height="20" field="Arma_Mod_Dano" margins="{left=2,top=5, bottom=5}" items="{'FOR', 'DES', 'CON', 'INT', 'SAB', 'CAR'}" values="{'FOR', 'DES', 'CON', 'INT', 'SAB', 'CAR'}" value="FOR"/> 
+				<label align="left" text="Propriedades:" width="67" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>		
+				<edit align="left" width="750" field="Arma_Propriedades" margins="{left=2,top=5, bottom=5, right=15}"/> 
+			</rectangle>
+		</layout>
+	
+		<layout align="top" height="30" margins="{top=5, left=15, right=15}">
+			<rectangle color="white" xradius="10" yradius="10" height="30" width="1183" margins="{left=15, right=15, top=5}" >	
+				<label align="left" text="Dano:" width="29" height="20" margins="{left=15, top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="25" height="20" field="Arma_Dano_Dado_Qtd" margins="{left=2,top=5, bottom=5}"/> 
+				<comboBox  align="left" width="80" height="20" field="Arma_Dano_Dado" margins="{left=2,top=5, bottom=5}" items="{'D4', 'D6', 'D8', 'D10', 'D12', 'D20'}" values="{'D4', 'D6', 'D8', 'D10', 'D12', 'D20'}" value="D6"/> 
+				<label align="left" text="Margem do Crítico:" width="93" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="25" height="20" field="Arma_Critico_Margem" margins="{left=2,top=5, bottom=5}"/> 
+				<label align="left" text="Multiplicador:" width="67" height="20" margins="{left=5,top=5, bottom=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+				<edit align="left" width="25" height="20" field="Arma_Critico_Multiplicador" margins="{left=2, top=5, bottom=5}"/> 		
+			</rectangle>
+		</layout>
+		   
+-- ----------- BOTOES ---------------		
+		<layout align="top" height="30" margins="{top=5, left=15, right=15}">
+			<rectangle color="white" xradius="10" yradius="10" height="30" width="1183" margins="{left=15, right=15, top=5}" >
+				<button align="right" text="X" width="20" margins="{right=15,top=5, bottom=5}">
+					<event name="onClick">
+						Dialogs.confirmOkCancel("Tem certeza que quer apagar esse objeto?",
+							function (confirmado)
+								if confirmado then
+									NDB.deleteNode(sheet);
+								end;
+							end);
+					</event>
+				</button>  			
+
+--[[INICIO - Deixar invisivel na ficha do jogador]]
+				<imageCheckBox name="cbxInvisivel" align="left" width="30" margins="{left=15,top=5, bottom=5}"
+                   checkedImage="images/invisivel.png" 
+                   uncheckedImage="images/visivel.png"
+                   autoChange="false"
+                   onClick="self:alternarVisibilidade();" />
+					<script>
+						function self:alternarVisibilidade()
+							if self.cbxInvisivel.checked then
+								ndb.setPermission(sheet, "group", "jogadores", "read", nil);
+								ndb.setPermission(sheet, "group", "espectadores", "read", nil);
+							else
+								ndb.setPermission(sheet, "group", "jogadores", "read", "deny");
+								ndb.setPermission(sheet, "group", "espectadores", "read", "deny");
+							end;
+						end; 
+
+						function self:atualizarCbxInvisivel()          
+							self.cbxInvisivel.checked = ndb.getPermission(sheet, "group", "espectadores", "read") == "deny" or ndb.getPermission(sheet, "group", "jogadores", "read") == "deny"                                                                                    
+							self.cbxInvisivel.enabled = ndb.testPermission(sheet, "writePermissions");
+						end;
+					</script> 
+        
+--[[FIM - Deixar invisivel na ficha do jogador]]	
+			</rectangle>
+		</layout>
+	</rectangle>
+	
+--Evento para o botao de visibilidade/invisibilidade de um item da lista.
+--Trabalha junto ao Botão>Script
+	<event name="onScopeNodeChanged">
+            if self.observer ~= nil then   
+                self.observer.enabled = false;
+                self.observer = nil;
+            end;             
+
+            if sheet ~= nil then   
+                self.observer = ndb.newObserver(sheet);
+                self.observer.onPermissionListChanged = function(node)                 
+                self:atualizarCbxInvisivel();
+            end;                               
+
+            self.observer.onFinalPermissionsCouldBeChanged = function(node)
+            self:atualizarCbxInvisivel();
+            end;                               
+
+            self:atualizarCbxInvisivel();  
+            end;
+    </event>
+
+</form>

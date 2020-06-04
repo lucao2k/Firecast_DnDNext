@@ -1,0 +1,87 @@
+	local personagem = sheet;  		
+	if (personagem ~= nil) then
+       local mesa = personagem.mesa;
+		
+--Quantos ataques efetuar?
+		local Quantidade_Ataques = tonumber(inputQuery("Quantos ataques serão efetuados?", "1"));
+		
+--Carrego as armas disponiveis
+			local node = NDB.getRoot(sheet);
+			local nodes = NDB.getChildNodes(node.armas);
+			local lista_armas = { }
+			local index = 1
+				for i=1, #nodes, 1 do
+					lista_armas[index] = (nodes[i].Arma_Descricao)
+					index = index + 1
+				end	
+			local indice, texto = choose("Qual arma deseja usar?", lista_armas, 1);			
+		
+--INICIO DO ATAQUE PARA FACILITAR NO CHAT
+			enviar("----> " .. personagem.NomePersonagem .. " inicia o ataque <----")
+		
+--Inicio do For para quantidade de ataques.		
+		for i = 1,tonumber(Quantidade_Ataques),1 do
+			enviar("Ataque de número: " .. (i) .. "/" .. Quantidade_Ataques);	
+
+--Seleciona o alvo
+			local Alvo_do_Ataque = chooseCharacter("Qual token deseja atacar?", "npc");
+			local node_Alvo_do_Ataque = getCharacterSheet(Alvo_do_Ataque);
+			local dificuldade = tonumber(Alvo_do_Ataque.CA or 0); 			
+						
+--Carrego os dados da arma selecionada
+			local Arma_Nome = nodes[indice].Arma_Descricao or 0;
+			local Arma_Alcance = nodes[indice].Arma_Alcance or 0;
+			local Arma_Dano_Tipo = nodes[indice].Arma_Dano_Tipo or 0;
+			local Arma_Municao_Tipo = nodes[indice].Arma_Municao_Tipo or 0;
+			local Arma_Municao_Qtd = nodes[indice].Arma_Municao_Qtd or 0;
+			local Arma_Bonus_Mais = nodes[indice].Arma_Bonus_Positivo or 0;
+			local Arma_Bonus_Menos = nodes[indice].Arma_Bonus_Negativo or 0;
+			local Arma_Bonus = Arma_Bonus_Mais - Arma_Bonus_Menos or 0;
+			local Arma_Dano_Modificador = nodes[indice].Arma_Mod_Dano or 0;
+
+				if Arma_Dano_Modificador == "FOR" then
+					Arma_Dano_Modificador = personagem.modificador_forca or 0;
+				elseif Arma_Dano_Modificador == "DES" then
+					Arma_Dano_Modificador = personagem.modificador_destresa or 0;
+				elseif Arma_Dano_Modificador == "CON" then
+					Arma_Dano_Modificador = personagem.modificador_constituicao or 0;
+				elseif Arma_Dano_Modificador == "INT" then
+					Arma_Dano_Modificador = personagem.modificador_inteligencia or 0;
+				elseif Arma_Dano_Modificador == "SAB" then
+					Arma_Dano_Modificador = personagem.modificador_sabedoria or 0;
+				elseif Arma_Dano_Modificador == "CAR" then
+					Arma_Dano_Modificador = personagem.modificador_carisma or 0;
+				end;
+				
+			local Arma_Dano_Dado_Qtd = nodes[indice].Arma_Dano_Dado_Qtd or 0;
+			local Arma_Dano_Dado = nodes[indice].Arma_Dano_Dado or 0;
+			local Arma_Critico_Margem = nodes[indice].Arma_Critico_Margem or 0;
+			local Arma_Critico_Multiplicador = nodes[indice].Arma_Critico_Multiplicador or 0;
+			local Arma_Propriedades = nodes[indice].Arma_Propriedades or 0;
+
+			local Bonus_Ataque = math.floor(Arma_Dano_Modificador + personagem.bonus_proficiencia)
+
+			local resultado = rolar("1d20 " .. "+" .. Bonus_Ataque, "contra CA " .. dificuldade .. " de " .. (node_Alvo_do_Ataque.NomePersonagem or "SEM_NOME") .. "!"); 
+			resultado_SemBonus = math.floor(resultado - Bonus_Ataque)
+			
+			if resultado >= dificuldade then
+				enviar(personagem.NomePersonagem .. " passou no teste! É hora de machucar alguém!!!");				
+				
+				if resultado_SemBonus >= tonumber(Arma_Critico_Margem) then		
+					enviar("Foi um SUCESSO DECISIVO! Pode ser que alguém sofra mais.")
+					local resultado_dano = rolar(math.floor(Arma_Dano_Dado_Qtd * Arma_Critico_Multiplicador) .. Arma_Dano_Dado .. "+" .. (math.floor(Arma_Dano_Modificador * Arma_Critico_Multiplicador)), " de dano " .. Arma_Dano_Tipo .. " em " .. (node_Alvo_do_Ataque.NomePersonagem or "SEM_NOME") .. "!" );
+				elseif resultado_SemBonus == 1 then
+					enviar("FALHA CRÍTICA! O que será que pode acontecer agora? Muuuhahahaha")
+					local resultado_dano = rolar(Arma_Dano_Dado_Qtd .. Arma_Dano_Dado .. Arma_Dano_Modificador, " de dano. " .. Arma_Dano_Tipo .. ". Este dano será válido?!" );
+				else				
+					local resultado_dano = rolar(Arma_Dano_Dado_Qtd .. Arma_Dano_Dado .. Arma_Dano_Modificador, " de dano " .. Arma_Dano_Tipo .. " em " .. (node_Alvo_do_Ataque.NomePersonagem or "SEM_NOME") .. "!" );
+				end;
+			else
+				enviar("Infelizmente " .. personagem.NomePersonagem .. " não passou no teste.");
+			end;
+		end;
+		
+--FIM DO ATAQUE PARA FACILITAR NO CHAT
+		enviar("----> FIM DO ATAQUE <----")
+		
+	end; 

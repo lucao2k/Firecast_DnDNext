@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="frmMagias_Nivel_2" height="150" margins="{top=2,bottom=2}">  
+
+
+
+
+--Layout Linha 1
+	<layout align="top" height="20">
+		<label align="left" text="Nível da Magia:" width="33" height="20" margins="{left=1}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		<label align="left" text="0" width="33" height="20" margins="{left=1}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		<label align="left" text=" - Truques" width="33" height="20" margins="{left=1}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		
+		<label align="left" text="Nome da Magia:" width="33" height="20" margins="{left=1}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		<edit align="left" width="300" height="20" field="Magia_Nome" margins="{left=2}"/> 
+		
+		
+		<label align="left" text="Peso:" width="26" height="20" margins="{left=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		<edit align="left" width="50" height="20" field="Arma_Peso" margins="{left=2}"/>   
+		<label align="left" text="Arma Tipo:" width="54" height="20" margins="{left=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		<edit align="left" width="100" height="20" field="Arma_Tipo" margins="{left=2}"/>		
+		<label align="left" text="Dano Tipo:" width="53" height="20" margins="{left=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		<edit align="left" width="100" height="20" field="Arma_Dano_Tipo" margins="{left=2}"/>
+		<label align="left" text="Alcance:" width="41" height="20" margins="{left=5}" fontFamily="Segoe UI" fontSize="10" fontColor="black" fontStyle="bold"/>
+		<edit align="left" width="50" field="Arma_Alcance" margins="{left=2}"/>
+	</layout>
+
+
+</form>
